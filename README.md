@@ -1,43 +1,65 @@
-﻿# [Project Title]
+# ERP-Sourced Sales & Finance Reporting
 
-**Industry:** [e.g., Retail / E-commerce]  
-**Tools:** SQL · Python · Power BI [adjust per project]
+**Industry:** Manufacturing / Distribution  
+**Tools:** SQL (PostgreSQL) · Odoo ERP · Power BI · Python
 
 ## Business Problem
-[1-2 paragraphs: what real business challenge does this address, and why 
-does it matter to the business? Not "predict X" - frame it as a decision 
-someone in the company needs to make.]
+A mid-sized distribution/manufacturing company runs its sales, inventory, 
+and invoicing through an ERP system (Odoo), but management lacks a 
+consolidated view connecting sales performance, customer concentration 
+risk, and order fulfillment health. Leadership needs to understand which 
+customers and products drive revenue, where revenue is at risk due to 
+concentration, and which orders are stalling in the sales pipeline — in 
+order to make decisions about customer diversification, sales follow-up 
+priorities, and inventory planning.
 
 ## Business Questions
-- [Question 1]
-- [Question 2]
-- [Question 3]
+1. What percentage of total revenue comes from our top customers, and is 
+   the business overly dependent on any single customer?
+2. How many quotations are stuck in "draft" status, what's their combined 
+   value, and how long have they been sitting unconfirmed?
+3. Which products generate the most revenue vs. the most units sold, and 
+   where do these two rankings diverge?
+4. Which salespeople or sales teams are closing the most confirmed orders 
+   vs. leaving the most unconfirmed?
+5. Are there confirmed sales orders at risk of delay due to low stock on 
+   the ordered products?
+6. Is revenue growing, flat, or declining month-over-month, and are there 
+   seasonal patterns?
 
 ## Data Source
-[Where the data came from, size/shape, time period covered, any known 
-limitations of the dataset.]
+Local Odoo 17 Community ERP instance (Docker), PostgreSQL 15 backend, 
+populated with Odoo's built-in demo dataset covering Sales, Invoicing, 
+Inventory, and Purchase modules.
 
 ## Methodology
-1. Data cleaning and preparation - [brief summary]
-2. Exploratory analysis - [brief summary]
-3. Statistical/analytical approach - [brief summary]
-4. Dashboard/visualization - [brief summary]
+1. Data extraction — direct SQL queries against the Odoo Postgres database
+2. Analysis — aggregation, joins across master/transactional data, 
+   window functions for share-of-total calculations
+3. Visualization — Power BI dashboard (in progress)
 
 ## Key Insights
-- [Insight 1 - tied to a number/finding, not vague]
-- [Insight 2]
-- [Insight 3]
+### Q1: Revenue Concentration
+- **68.7% of total revenue comes from a single customer (Gemini 
+  Furniture)** — the top 5 customers combined account for effectively 
+  all revenue, with the #2 customer (Joel Willis) at just 13.4%.
+- This represents severe customer concentration risk: losing this one 
+  account would eliminate more than two-thirds of revenue overnight.
 
 ## Business Recommendations
-- [Recommendation 1 - tied directly to an insight above]
-- [Recommendation 2]
+### Q1
+- Investigate why revenue is this concentrated — is this a genuinely 
+  dominant account, or is the sales team over-relying on one relationship?
+- Develop a customer diversification strategy (targeted outreach to 
+  grow mid-tier accounts like Joel Willis and Ready Mat) to reduce 
+  single-customer dependency.
 
 ## Repo Structure
-- data/        raw (not committed) and processed data
-- sql/         SQL scripts for data extraction/analysis
-- notebooks/   Python/R analysis notebooks
-- dashboard/   Power BI/Tableau files or exported visuals
-- docs/        supporting docs, data dictionary, methodology notes
+- data/          raw (not committed) and processed data
+- sql/           SQL scripts for data extraction/analysis
+- notebooks/     Python/R analysis notebooks
+- dashboard/     Power BI/Tableau files or exported visuals
+- docs/          supporting docs, data dictionary, methodology notes
 
 ## How to Reproduce
-[Brief steps someone would follow to rerun this analysis]
+[To be completed once the full Docker/Odoo setup is finalized]
