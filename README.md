@@ -53,6 +53,16 @@ Inventory, and Purchase modules.
 - Develop a customer diversification strategy (targeted outreach to 
   grow mid-tier accounts like Joel Willis and Ready Mat) to reduce 
   single-customer dependency.
+  ## Key Insights
+  ### Q2: Stalled Quotations Pipeline
+- 4 quotations remain unconfirmed, totaling 5,470 KSh in pipeline value.
+- 3 of these (5,092.5 KSh) have been stalled for 52 days — concentrated 
+  in just two accounts: Ready Mat and Acme Corporation.
+  ## Business Recommendations
+  ### Q2
+- Review the Ready Mat and Acme Corporation accounts specifically — 
+  either re-engage to convert these quotations or formally close them 
+  out to keep pipeline reporting accurate.
 
 ## Repo Structure
 - data/          raw (not committed) and processed data
