@@ -64,6 +64,22 @@ Inventory, and Purchase modules.
   either re-engage to convert these quotations or formally close them 
   out to keep pipeline reporting accurate.
 
+  ## Key Insights
+  ### Q3: Revenue vs. Units Sold Divergence
+- Revenue and volume rankings diverge: Acoustic Bloc Screens leads in 
+  revenue (15,405 KSh) despite moderate volume (53 units), while Virtual 
+  Interior Design and Virtual Home Staging sell in much higher volume 
+  (74 and 60 units) but generate far less revenue each.
+- This suggests a meaningful price-per-unit/margin difference between 
+  "volume" products and "revenue" products.
+  ## Business Recommendations
+  ### Q3
+- Confirm margin data (not available in this dataset) before treating 
+  high-revenue products as automatically higher-priority — revenue alone 
+  doesn't confirm profitability.
+- Consider whether sales effort on high-volume, lower-revenue items should 
+  be reallocated toward higher-revenue products, pending margin analysis.
+
 ## Repo Structure
 - data/          raw (not committed) and processed data
 - sql/           SQL scripts for data extraction/analysis
