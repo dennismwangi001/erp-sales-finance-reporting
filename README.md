@@ -45,6 +45,24 @@ Inventory, and Purchase modules.
   all revenue, with the #2 customer (Joel Willis) at just 13.4%.
 - This represents severe customer concentration risk: losing this one 
   account would eliminate more than two-thirds of revenue overnight.
+   ### Q2: Stalled Quotations Pipeline
+- 4 quotations remain unconfirmed, totaling 5,470 KSh in pipeline value.
+- 3 of these (5,092.5 KSh) have been stalled for 52 days — concentrated 
+  in just two accounts: Ready Mat and Acme Corporation.
+  ### Q3: Revenue vs. Units Sold Divergence
+- Revenue and volume rankings diverge: Acoustic Bloc Screens leads in 
+  revenue (15,405 KSh) despite moderate volume (53 units), while Virtual 
+  Interior Design and Virtual Home Staging sell in much higher volume 
+  (74 and 60 units) but generate far less revenue each.
+- This suggests a meaningful price-per-unit/margin difference between 
+  "volume" products and "revenue" products.
+  ### Q4: Sales Rep Performance
+- Marc Demo: 15 confirmed orders (20,017 KSh), 2 unconfirmed — ~88% 
+  close rate.
+- Mitchell Admin: 4 confirmed orders (7,643.5 KSh), 2 unconfirmed — ~67% 
+  close rate.
+- Note: sample sizes are small (demo data); ratios are illustrative of 
+  method, not statistically robust conclusions.
 
 ## Business Recommendations
 ### Q1
@@ -53,32 +71,20 @@ Inventory, and Purchase modules.
 - Develop a customer diversification strategy (targeted outreach to 
   grow mid-tier accounts like Joel Willis and Ready Mat) to reduce 
   single-customer dependency.
-  ## Key Insights
-  ### Q2: Stalled Quotations Pipeline
-- 4 quotations remain unconfirmed, totaling 5,470 KSh in pipeline value.
-- 3 of these (5,092.5 KSh) have been stalled for 52 days — concentrated 
-  in just two accounts: Ready Mat and Acme Corporation.
-  ## Business Recommendations
-  ### Q2
+### Q2
 - Review the Ready Mat and Acme Corporation accounts specifically — 
   either re-engage to convert these quotations or formally close them 
   out to keep pipeline reporting accurate.
-
-  ## Key Insights
-  ### Q3: Revenue vs. Units Sold Divergence
-- Revenue and volume rankings diverge: Acoustic Bloc Screens leads in 
-  revenue (15,405 KSh) despite moderate volume (53 units), while Virtual 
-  Interior Design and Virtual Home Staging sell in much higher volume 
-  (74 and 60 units) but generate far less revenue each.
-- This suggests a meaningful price-per-unit/margin difference between 
-  "volume" products and "revenue" products.
-  ## Business Recommendations
   ### Q3
 - Confirm margin data (not available in this dataset) before treating 
   high-revenue products as automatically higher-priority — revenue alone 
   doesn't confirm profitability.
 - Consider whether sales effort on high-volume, lower-revenue items should 
   be reallocated toward higher-revenue products, pending margin analysis.
+  ### Q4
+- Investigate the gap in Mitchell Admin's conversion rate — determine 
+  whether it reflects customer mix, experience, or a follow-up process 
+  gap, and address accordingly.
 
 ## Repo Structure
 - data/          raw (not committed) and processed data
