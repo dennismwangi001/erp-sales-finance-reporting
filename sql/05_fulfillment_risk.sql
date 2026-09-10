@@ -1,5 +1,5 @@
 -- Business Question 5: Are there confirmed sales orders at risk of delay 
--- due to low stock on the ordered products?
+-- due to low stock on the ordered products? (stockable products only)
 
 SELECT 
     pt.name->>'en_US' AS product_name,
@@ -16,6 +16,7 @@ LEFT JOIN (
     GROUP BY product_id
 ) sq ON pp.id = sq.product_id
 WHERE so.state = 'sale'
+  AND pt.type = 'product'
 GROUP BY pt.name, sq.total_on_hand
 HAVING SUM(sol.product_uom_qty) > COALESCE(sq.total_on_hand, 0)
 ORDER BY shortfall DESC;
