@@ -63,6 +63,8 @@ Inventory, and Purchase modules.
   close rate.
 - Note: sample sizes are small (demo data); ratios are illustrative of 
   method, not statistically robust conclusions.
+  ## Q5: comfirmed sales analysis 
+  All 7 confirmed-order physical products (excluding services) show zero recorded stock on hand against real customer demand — for example, Acoustic Bloc Screens has confirmed orders with no corresponding inventory. In a live business context, this pattern would indicate a critical, company-wide stockout risk requiring immediate procurement action. However, given this analysis runs on Odoo's demo dataset, it's equally possible that demo data was not seeded with realistic stock quantities — this method would need to be re-validated against a live inventory feed before treating the finding as a genuine operational crisis
 
 ## Business Recommendations
 ### Q1
@@ -85,6 +87,8 @@ Inventory, and Purchase modules.
 - Investigate the gap in Mitchell Admin's conversion rate — determine 
   whether it reflects customer mix, experience, or a follow-up process 
   gap, and address accordingly.
+  ### Q5
+  In a production environment: immediately flag these 7 products to procurement/inventory teams for urgent restocking, and investigate whether this reflects a genuine supply chain failure or a data sync issue between the Sales and Inventory modules. Given the demo-data context here, the value of this analysis lies primarily in demonstrating the method — joining Sales and Inventory data to detect fulfillment risk — which is directly transferable to a live ERP system.
 
 ## Repo Structure
 - data/          raw (not committed) and processed data
