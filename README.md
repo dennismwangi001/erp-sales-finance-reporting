@@ -66,6 +66,19 @@ Inventory, and Purchase modules.
   ## Q5: comfirmed sales analysis 
   All 7 confirmed-order physical products (excluding services) show zero recorded stock on hand against real customer demand — for example, Acoustic Bloc Screens has confirmed orders with no corresponding inventory. In a live business context, this pattern would indicate a critical, company-wide stockout risk requiring immediate procurement action. However, given this analysis runs on Odoo's demo dataset, it's equally possible that demo data was not seeded with realistic stock quantities — this method would need to be re-validated against a live inventory feed before treating the finding as a genuine operational crisis
 
+  ### Q6: Revenue Trend & Forecasting Readiness
+- Confirmed-order revenue rose from 5,826 KSh (July 2026) to 21,834.5 KSh 
+  (August 2026) — an approximate 275% month-over-month increase.
+- **Data limitation:** the ERP environment currently holds only 2 months 
+  of transactional history, which is insufficient to build a statistically 
+  reliable forecast — any trend model fit to 2 points would produce a 
+  misleadingly confident result rather than a genuine prediction.
+- Methodologically, once at least 12 months of order history are available, 
+  the appropriate next step would be a seasonal time-series model (e.g. 
+  SARIMA) or, at minimum, a simple linear trend with confidence intervals, 
+  to properly account for potential seasonality and estimate forecast 
+  uncertainty.
+
 ## Business Recommendations
 ### Q1
 - Investigate why revenue is this concentrated — is this a genuinely 
@@ -89,6 +102,12 @@ Inventory, and Purchase modules.
   gap, and address accordingly.
   ### Q5
   In a production environment: immediately flag these 7 products to procurement/inventory teams for urgent restocking, and investigate whether this reflects a genuine supply chain failure or a data sync issue between the Sales and Inventory modules. Given the demo-data context here, the value of this analysis lies primarily in demonstrating the method — joining Sales and Inventory data to detect fulfillment risk — which is directly transferable to a live ERP system.
+  ### Q6
+- Continue tracking monthly revenue as the ERP system accumulates more 
+  order history; revisit forecasting once 12+ months of data are available.
+- In a live business setting with sufficient history, use the resulting 
+  forecast to inform inventory planning and staffing decisions ahead of 
+  anticipated demand changes.
 
 ## Repo Structure
 - data/          raw (not committed) and processed data
