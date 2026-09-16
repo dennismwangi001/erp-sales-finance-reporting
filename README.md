@@ -117,4 +117,24 @@ Inventory, and Purchase modules.
 - docs/          supporting docs, data dictionary, methodology notes
 
 ## How to Reproduce
-[To be completed once the full Docker/Odoo setup is finalized]
+## How to Reproduce
+1. **Set up the ERP environment**: Run a local Odoo 17 instance via Docker 
+   (Odoo + PostgreSQL 15), with demo data enabled. Full setup steps, 
+   including troubleshooting, are documented in this repo's setup guide 
+   (or see the author's Docker/Odoo/DBeaver setup reference).
+2. **Activate modules**: Sales, Invoicing, Inventory, and Purchase.
+3. **Run the SQL queries**: Each business question's query is in `/sql`, 
+   numbered 01-06, designed to run directly against the Odoo Postgres 
+   database (default database name used here: `erp-practice-2`).
+4. **Revenue trend (Q6)**: `/notebooks/06_revenue_trend_forecast.ipynb` 
+   connects to the same database via Python (pandas + SQLAlchemy) to 
+   aggregate and chart monthly revenue.
+5. **Dashboard**: Open `/dashboard/project4_dashboard.pbix` in Power BI 
+   Desktop. Data sources are configured as direct PostgreSQL connections 
+   (Server: `localhost:5432`) — update credentials/database name in 
+   Power BI's data source settings if reproducing on a different machine.
+
+**Note:** This project uses Odoo's built-in demo dataset (2 months of 
+transactional history), not a live production system. Findings 
+demonstrate analytical method and are explicitly flagged as illustrative 
+where data volume is insufficient for robust conclusions (see Q6).
